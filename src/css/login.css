@@ -1,0 +1,48 @@
+/* Tuotettu kokonaan tekoälyn avulla */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(241, 241, 241);
+  height: 500px;
+  display: grid;
+  place-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgb(110, 179, 30);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #22b415;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #20a532;
+}

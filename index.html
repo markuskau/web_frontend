@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minun sivu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="navbar">
+        <h1 class="headline">HealthDiary</h1>
+
+        <nav id="nav-links">
+          <a href="index.html">Koti</a>
+          <a href="bmi.html">BMI-laskin</a>
+          <a href="#">Yhteystiedot</a>
+
+
+          <span id="user-area">
+            <a href="login.html" class="btn-outline">Kirjaudu</a>
+          </span>
+        </nav>
+      </header>
+
+      <section class="hero"></section>
+
+      <div class="hero-content">
+        <div class="about-text">
+          <h2>
+            HealthDiary
+            <span id="lightblue">tallenna ja seuraa omaa terveyttäsi</span>
+            viikon jokaisena päivänä
+          </h2>
+        </div>
+      </div>
+
+      <div class="card-widgets">
+          <div class="widget bmi">
+            <h4>BMI</h4>
+            <span>📈</span>
+          </div>
+
+          <div class="widget workout">
+            <h4>Treenit</h4>
+            <span>💪</span>
+          </div>
+        </div>
+
+      <div class="card">
+        <div id="laatikko1"></div>
+
+        <h3>Tulokset</h3>
+
+        <p>
+          <img id="gym" src="/public/img/kuntosali.jpg" alt="Kuntosali" />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
+          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
+          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+          In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
+          vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+          non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+          purus. Mauris quis diam velit.
+        </p>
+      </div>
+
+    <footer>Copyright Markus</footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

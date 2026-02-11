@@ -1,0 +1,302 @@
+/* Osassa koodia on hyödynnetty tekoälyä */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(241, 241, 241);
+  color: rgb(0, 0, 0);
+}
+
+.page {
+  width: 1000px;
+  margin: auto;
+  background-color: rgb(241, 241, 241);
+}
+
+.navbar {
+  background-color: rgb(75, 230, 14);
+  padding: 20px;
+  border-radius: 25px;
+  text-align: left;
+}
+
+#nav-links {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+#nav-links a {
+  color: rgb(107, 107, 107);
+  margin-right: 24px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+#nav-links a:hover::after {
+  width: 100%;
+}
+
+.headline {
+  color: rgb(255, 243, 243);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  margin-right: 100px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-family: "Poppins", "Montserrat", sans-serif;
+}
+
+.about-text {
+  font-family: "Poppins", "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #828282;
+  padding: 25px 30px;
+  border-radius: 14px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  width: 450px;
+  height: auto;
+  padding: 30px;
+  margin: auto;
+  border-radius: 25px;
+  background-image: url(/public/img/fresh-green-background.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid black;
+  color: rgb(107, 107, 107);
+  font-size: 14px;
+  position: relative;
+}
+
+.card-widgets {
+  width: 450px;
+  margin: 40px auto;
+  display: flex;
+  gap: 20px;
+}
+.widget {
+  flex: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+}
+.widget h4 {
+  margin: 0;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.widget span {
+  font-size: 24px;
+  margin-top: 6px;
+}
+
+#gym {
+  width: 150px;
+  float: left;
+  margin-right: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 30px;
+  padding-top: 30px;
+  margin-top: 20px;
+  color: rgb(156, 154, 154);
+  font-size: 16px;
+  background-color: rgb(211, 209, 209);
+  text-align: center;
+}
+
+#lightblue {
+  color: rgb(72, 255, 0);
+}
+
+#laatikko1 {
+  width: 100px;
+  height: 100px;
+  background-image: url(/public/img/kuntosali2.jpg);
+  background-size: 100px;
+  background-position: center;
+  position: absolute;
+  top: -61px;
+  right: 26px;
+}
+
+.hero {
+  background-image: url("/public/img/kuntosaliv0.2.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .page {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .headline {
+    margin-right: 0;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #nav-links {
+    display: block;
+    margin-right: 0;
+  }
+
+  #nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    width: 80%;
+    margin: auto;
+    min-height: 35vh;
+  }
+
+  .about-text {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .card-widgets {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  #gym {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+    width: 120px;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1299px) {
+  .page {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 80%;
+    margin: auto;
+  }
+
+  .hero {
+    width: 80%;
+    margin: auto;
+  }
+
+  .card {
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-widgets {
+    width: 80%;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .page {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 80%;
+    margin: auto;
+  }
+
+  .card {
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-widgets {
+    width: 80%;
+  }
+
+  .hero {
+    width: 80%;
+    margin: auto;
+    min-height: 50vh;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+}
