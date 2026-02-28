@@ -87,6 +87,10 @@ body {
   }
 }
 
+dialog {
+  margin: auto;
+}
+
 .card {
   width: 450px;
   height: auto;

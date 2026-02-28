@@ -1,11 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diaries</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diary page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="navbar">
+        <h1 class="headline">HealthDiary</h1>
 
-</body>
+        <nav id="nav-links">
+          <a href="index.html">Koti</a>
+          <a href="bmi.html">BMI-laskin</a>
+          <a href="diary.html">Päiväkirja</a>
+        </nav>
+      </header>
+    </div>
+
+    <main>
+      Päiväkirjahaut
+      <button class="get_entries">Hae päiväkirjamerkinnät</button>
+
+      <section class="diary-card-area">
+        <div class="card">
+          <h2>Otsikko</h2>
+          <p>Teksti</p>
+        </div>
+        <div class="card">
+          <h2>Otsikko</h2>
+          <p>Teksti</p>
+        </div>
+        <div class="card">
+          <h2>Otsikko</h2>
+          <p>Teksti</p>
+        </div>
+        <div class="card">
+          <h2>Otsikko</h2>
+          <p>Teksti</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>Copyright Markus</footer>
+
+    <dialog class="diary_dialog">
+      <h2>tässä on dialogi</h2>
+      <p>Tänne voi avata ja muokata tietoa</p>
+      <div class="diary_id">ID</div>
+      <button autofocus>Close</button>
+    </dialog>
+  </body>
+  <script type="module" src="/src/js/diary.js"></script>
 </html>

@@ -1,48 +1,129 @@
-/* Tuotettu kokonaan tekoälyn avulla */
-
+/* --- Perusasetukset --- */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(241, 241, 241);
-  height: 500px;
-  display: grid;
-  place-items: center;
-  color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.login-container {
-  background: white;
-  padding: 40px;
-  border-radius: 16px;
-  width: 300px;
-  box-shadow: 0 10px 30px rgb(110, 179, 30);
-  text-align: center;
+/* --- Yläotsikot --- */
+h3 {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  margin-top: 40px;
+  font-size: 2rem;
 }
 
-.login-container h2 {
-  margin-bottom: 20px;
+/* --- Lomakkeiden yleinen tyyli --- */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.login-container input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-  margin-bottom: 16px;
-  font-size: 16px;
+/* --- Labelit ja inputit --- */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.login-container button {
-  width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* --- Submit-nappulat --- */
+input[type="submit"] {
+  background: #2575fc;
+  color: white;
   padding: 12px;
   border: none;
-  border-radius: 10px;
-  background: #22b415;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.login-container button:hover {
-  background: #20a532;
+input[type="submit"]:hover {
+  background: #6a11cb;
+  transform: translateY(-2px);
+}
+
+/* --- Pre & Code blokit --- */
+pre, code {
+  background: rgba(0,0,0,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+/* --- Divit ja napit lomakkeiden jälkeen --- */
+#loginResponse, #meResponse, #clearResponse {
+  background: rgba(255,255,255,0.9);
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-top: 10px;
+  min-height: 20px;
+}
+
+/* --- Painikkeet ilman formia --- */
+button {
+  background: #6a11cb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: #2575fc;
+  transform: translateY(-2px);
+}
+
+/* --- Responsiivisuus --- */
+@media (max-width: 500px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input[type="submit"], button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
 }
