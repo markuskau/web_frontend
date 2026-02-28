@@ -272,6 +272,46 @@ const getUsers = async () => {
   renderUsersTable(users);
 };
 
+const addUser = async (event) => {
+  event.preventDefault();
+
+  const addform = document.querySelector('.addform');
+
+  const username = addform.querySelector('#username').value.trim();
+	const password = addform.querySelector('#password').value.trim();
+	const email = addform.querySelector('#email').value.trim();
+
+  const bodyData = {
+		username: username,
+		password: password,
+		email: email,
+	};
+
+  const url = 'http://localhost:3000/api/users';
+
+  const options = {
+		body: JSON.stringify(bodyData),
+		method: 'POST',
+		headers: {
+			'Content-type': 'application/json',
+		},
+	};
+
+  const response = await fetchData(url, options);
+
+  if (response.error) {
+		console.error('Error adding a new user:', response.error);
+		return;
+	}
+
+  if (response.message) {
+		console.log(response.message, 'success');
+	}
+
+  console.log(response);
+	addform.reset();
+};
+
 export {
   getItems,
   getItemById,
@@ -280,4 +320,5 @@ export {
   loadItemToPutForm,
   updateItemById,
   getUsers,
+  addUser,
 };

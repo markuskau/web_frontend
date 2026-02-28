@@ -7,6 +7,7 @@ import {
   updateItemById,
   loadItemToPutForm,
   getUsers,
+  addUser,
 } from './items';
 
 console.log('Scripti starttaa');
@@ -123,4 +124,7 @@ putForm.addEventListener('submit', updateItemById);
 
 const getUsersBtn = document.querySelector('.get_items_table');
 getUsersBtn.addEventListener('click', getUsers);
+
+const addUserForm = document.querySelector('.addform');
+addUserForm.addEventListener('submit', addUser);
 

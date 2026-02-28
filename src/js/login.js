@@ -97,7 +97,7 @@ const loginUser = async (event) => {
 		localStorage.setItem('name', response.user.username);
 		logResponse('loginResponse', `localStorage set with token value: ${response.token}`);
 		setTimeout(function () {
-			// window.location.href = 'users.html';
+			window.location.href = 'index.html';
 		}, 3000);
 	}
 
@@ -111,7 +111,7 @@ const checkUser = async (event) => {
 	let token = localStorage.getItem('token');
 	console.log(token);
 	if (token) {
-		headers = { Authorization: `Bearer ${localStorage.token}` };
+		headers = { Authorization: `Bearer ${token}` };
 	}
 	const options = {
 		headers: headers,
@@ -128,7 +128,7 @@ const checkUser = async (event) => {
 		console.log(response.message, 'success');
 		logResponse('meResponse', `Authorized user info: ${JSON.stringify(response)}`);
 		setTimeout(function () {
-			// window.location.href = 'users.html';
+			//window.location.href = 'index.html';
 		}, 3000);
 	}
 
@@ -158,6 +158,7 @@ const deleteUser = async (event) => {
 
 function clearLocalStorage() {
 	localStorage.removeItem('token');
+  localStorage.removeItem('name');
 	logResponse('clearResponse', 'localStorage cleared!');
 }
 
