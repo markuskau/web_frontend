@@ -167,3 +167,6 @@ registerForm.addEventListener('submit', registerUser);
 const loginForm = document.querySelector('.loginForm');
 loginForm.addEventListener('submit', loginUser);
 
+const meRequest = document.querySelector('#meRequest');
+meRequest.addEventListener('click', checkUser);
+

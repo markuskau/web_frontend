@@ -66,3 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lasketaan vain jos käyttäjä on kirjautunut
   if (user) getSleepAverage();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
+
+  const ctx = document.getElementById('bmiChartWidget').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: history.map((_, i) => `Mittaus ${i + 1}`),
+      datasets: [{
+        label: 'BMI-arvo',
+        data: history,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        tension: 0.3
+      }]
+    },
+    options: { responsive: true }
+  });
+});

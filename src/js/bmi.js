@@ -17,6 +17,10 @@ window.calculateBMI = function () {
   document.getElementById('bmiValue').textContent = roundedBMI;
   console.log('BMI value:', roundedBMI);
 
+  let history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
+  history.push(bmi);
+  localStorage.setItem('bmiHistory', JSON.stringify(history));
+
   clearActive();
 
   let analysis = "";
@@ -36,6 +40,7 @@ window.calculateBMI = function () {
 
   // Näytetään analyysi käyttöliittymässä
   document.getElementById("analysisText").textContent = analysis;
+
 };
 
 // Poistaa aktiivisen luokan kaikista painoindeksiluokista
@@ -43,4 +48,4 @@ function clearActive() {
   document.getElementById('low').classList.remove('active');
   document.getElementById('normal').classList.remove('active');
   document.getElementById('high').classList.remove('active');
-}
+};

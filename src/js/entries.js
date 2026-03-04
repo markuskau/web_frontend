@@ -5,10 +5,10 @@ const diaryContainer = document.querySelector(".diary-card-area");
 // Dialog
 /////////////////////////////
 
-const dialog = document.querySelector('.diary_dialog');
-const closeButton = document.querySelector('.diary_dialog button');
- //"Close" button closes the dialog
-closeButton.addEventListener('click', () => {
+const dialog = document.querySelector(".diary_dialog");
+const closeButton = document.querySelector(".diary_dialog button");
+//"Close" button closes the dialog
+closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
@@ -62,10 +62,10 @@ const getEntries = async (event) => {
     openCard.textContent = "Avaa Dialogissa";
 
     // Lisätään napille kuuntelija
-    openCard.addEventListener('click', () => {
+    openCard.addEventListener("click", () => {
       dialog.showModal();
-      dialog.querySelector('.diary_id').innerHTML =
-      `<div>ID: <span>${entry.entry_id}</span></div>`;
+      dialog.querySelector(".diary_id").innerHTML =
+        `<div>ID: <span>${entry.entry_id}</span></div>`;
     });
 
     card.appendChild(cardDiary);
@@ -74,4 +74,38 @@ const getEntries = async (event) => {
   });
 };
 
-export { getEntries };
+const addEntry = async ({ entry_date, mood, weight, sleep_hours, notes }) => {
+  const url = "http://localhost:3000/api/entries";
+
+  // Haetaan token localStoragesta
+  const token = localStorage.getItem("token");
+  const headers = {
+    "Content-Type": "application/json",
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+  };
+
+  const body = JSON.stringify({ entry_date, mood, weight, sleep_hours, notes });
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: body,
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Error adding entry:", data);
+      return { error: data.error || "Unknown error" };
+    }
+
+    console.log("Entry added:", data);
+    return data; // sisältää mm. entry_id ja message
+  } catch (err) {
+    console.error("Network or fetch error:", err);
+    return { error: err.message };
+  }
+};
+
+export { getEntries, addEntry, };

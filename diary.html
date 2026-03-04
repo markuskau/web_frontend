@@ -26,6 +26,7 @@
       <h2>Päiväkirjahaut</h2>
 
       <button class="get_entries">Hae päiväkirjamerkinnät</button>
+      <br />
       <button class="add_entries">Lisää uusi päiväkirjamerkintä</button>
 
       <section class="diary-card-area"></section>
@@ -34,10 +35,22 @@
     <footer>Copyright Markus</footer>
 
     <dialog class="diary_dialog">
-      <h2>tässä on dialogi</h2>
+      <h2>Päiväkirjamerkintä</h2>
       <p>Tänne voi avata ja muokata tietoa</p>
       <div class="diary_id">ID</div>
-      <button autofocus>Close</button>
+      <button id="closeEntryBtn" autofocus>Close</button>
+      <button id="deleteEntryBtn">Poista</button>
+    </dialog>
+
+    <dialog class="add_entry_dialog">
+      <h2>Lisää uusi päiväkirjamerkintä</h2>
+      <label>Päivämäärä: <input type="date" id="entryDate" /></label>
+      <label>Mieliala: <input type="text" id="mood" /></label>
+      <label>Paino (kg): <input type="number" id="weight" /></label>
+      <label>Unet (tunnit): <input type="number" id="sleepHours" /></label>
+      <label>Muistiinpanot: <textarea id="notes"></textarea></label>
+      <button id="addEntryDialogBtn">Add</button>
+      <button id="closeAddDialogBtn">Close</button>
     </dialog>
   </body>
   <script type="module" src="/src/js/diary.js"></script>
