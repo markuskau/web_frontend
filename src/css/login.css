@@ -1,8 +1,7 @@
-/* --- Perusasetukset --- */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #333;
+  background: linear-gradient(135deg, #bbcabe, #70f375);
+  color: #fffefe;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,29 +10,26 @@ body {
   min-height: 100vh;
 }
 
-/* --- Yläotsikot --- */
 h3 {
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  color: #a8a7a7;
+  text-shadow: 1px 1px 3px rgba(5, 212, 22, 0.4);
   margin-top: 40px;
   font-size: 2rem;
 }
 
-/* --- Lomakkeiden yleinen tyyli --- */
 form {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(101, 184, 93, 0.95);
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.2);
   max-width: 400px;
-  width: 90%;
+  width: 300px;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* --- Labelit ja inputit --- */
 label {
   font-weight: bold;
   margin-bottom: 5px;
@@ -57,9 +53,8 @@ input[type="email"]:focus {
   box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
 }
 
-/* --- Submit-nappulat --- */
 input[type="submit"] {
-  background: #2575fc;
+  background: #cdcdcd;
   color: white;
   padding: 12px;
   border: none;
@@ -70,13 +65,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #6a11cb;
+  background: #18d828;
   transform: translateY(-2px);
 }
 
-/* --- Pre & Code blokit --- */
 pre, code {
-  background: rgba(0,0,0,0.05);
+  background: rgba(106, 27, 27, 0.05);
   padding: 10px;
   border-radius: 8px;
   overflow-x: auto;
@@ -84,7 +78,6 @@ pre, code {
   font-size: 0.9rem;
 }
 
-/* --- Divit ja napit lomakkeiden jälkeen --- */
 #loginResponse, #meResponse, #clearResponse {
   background: rgba(255,255,255,0.9);
   padding: 10px 12px;
@@ -94,7 +87,6 @@ pre, code {
   min-height: 20px;
 }
 
-/* --- Painikkeet ilman formia --- */
 button {
   background: #6a11cb;
   color: white;

@@ -95,10 +95,10 @@ const loginUser = async (event) => {
 		console.log(response.message, 'success');
 		localStorage.setItem('token', response.token);
 		localStorage.setItem('name', response.user.username);
-		logResponse('loginResponse', `localStorage set with token value: ${response.token}`);
+		logResponse('loginResponse', `Login ok`);
 		setTimeout(function () {
-			window.location.href = 'index.html';
-		}, 3000);
+			window.location.href = 'home.html';
+		}, 1000);
 	}
 
 	console.log(response);
@@ -129,7 +129,7 @@ const checkUser = async (event) => {
 		logResponse('meResponse', `Authorized user info: ${JSON.stringify(response)}`);
 		setTimeout(function () {
 			//window.location.href = 'index.html';
-		}, 3000);
+		}, 1000);
 	}
 
 	console.log(response);
@@ -156,11 +156,6 @@ const deleteUser = async (event) => {
 	}
 };
 
-function clearLocalStorage() {
-	localStorage.removeItem('token');
-  localStorage.removeItem('name');
-	logResponse('clearResponse', 'localStorage cleared!');
-}
 
 function logResponse(codeblock, text) {
 	document.getElementById(codeblock).innerText = text;
@@ -172,8 +167,3 @@ registerForm.addEventListener('submit', registerUser);
 const loginForm = document.querySelector('.loginForm');
 loginForm.addEventListener('submit', loginUser);
 
-const meRequest = document.querySelector('#meRequest');
-meRequest.addEventListener('click', checkUser);
-
-const clear = document.querySelector('#clearButton');
-clear.addEventListener('click', clearLocalStorage);

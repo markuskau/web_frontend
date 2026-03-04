@@ -112,7 +112,7 @@ dialog {
   display: flex;
   gap: 20px;
 }
-.widget {
+.widget-bmi {
   flex: auto;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 18px;
@@ -121,16 +121,36 @@ dialog {
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 
 }
-.widget h4 {
+.widget-bmi h4 {
   margin: 0;
   font-size: 14px;
   margin-top: 6px;
 }
 
-.widget span {
+.widget-bmi span {
   font-size: 24px;
   margin-top: 6px;
 }
+.widget-sleep {
+  flex: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+}
+.widget-sleep h4 {
+  margin: 0;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.widget-sleep span {
+  font-size: 24px;
+  margin-top: 6px;
+}
+
 
 #gym {
   width: 150px;
@@ -186,6 +206,7 @@ footer {
   .navbar {
     width: 80%;
     margin: auto;
+    flex-direction: column;
     text-align: center;
   }
 
