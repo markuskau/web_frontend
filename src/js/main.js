@@ -1,7 +1,6 @@
-import '/src/css/style.css'
+import '../css/style.css'
 import '../css/mobile.css';
 import { fetchData } from './fetch.js';
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const userArea = document.getElementById("user-area");
@@ -67,6 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (user) getSleepAverage();
 });
 
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
 
@@ -86,3 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     options: { responsive: true }
   });
 });
+
+
+

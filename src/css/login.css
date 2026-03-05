@@ -78,12 +78,13 @@ pre, code {
   font-size: 0.9rem;
 }
 
-#loginResponse, #meResponse, #clearResponse {
+#loginResponse {
   background: rgba(255,255,255,0.9);
+  color: #333;
   padding: 10px 12px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  margin-top: 10px;
+  margin-bottom: 20px;
   min-height: 20px;
 }
 
@@ -103,6 +104,8 @@ button:hover {
   background: #2575fc;
   transform: translateY(-2px);
 }
+
+
 
 /* --- Responsiivisuus --- */
 @media (max-width: 500px) {

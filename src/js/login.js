@@ -95,66 +95,16 @@ const loginUser = async (event) => {
 		console.log(response.message, 'success');
 		localStorage.setItem('token', response.token);
 		localStorage.setItem('name', response.user.username);
-		logResponse('loginResponse', `Login ok`);
+		logResponse('loginResponse', `Kirjautuminen onnistui. Tervetuloa ${response.user.username}!`);
 		setTimeout(function () {
 			window.location.href = 'home.html';
-		}, 1000);
+		}, 3000);
 	}
 
 	console.log(response);
 	loginForm.reset(); // tyhjennetään formi
 };
 
-const checkUser = async (event) => {
-	const url = 'http://localhost:3000/api/users/me';
-	let headers = {};
-	let token = localStorage.getItem('token');
-	console.log(token);
-	if (token) {
-		headers = { Authorization: `Bearer ${token}` };
-	}
-	const options = {
-		headers: headers,
-	};
-
-	const response = await fetchData(url, options);
-
-	if (response.error) {
-		console.error('Error login in:', response.error);
-		return;
-	}
-
-	if (response.message) {
-		console.log(response.message, 'success');
-		logResponse('meResponse', `Authorized user info: ${JSON.stringify(response)}`);
-		setTimeout(function () {
-			//window.location.href = 'index.html';
-		}, 1000);
-	}
-
-	console.log(response);
-	loginForm.reset(); // tyhjennetään formi
-};
-
-const deleteUser = async (event) => {
-	console.log(evt);
-	console.log(evt.target);
-	console.log(evt.target.attributes['data-id'].value);
-	const id = evt.target.attributes['data-id'].value;
-	const url = `http://localhost/api/users/${id}`;
-	const options = { method: 'DELETE' };
-
-	const answer = confirm(`Are you sure you want to delete user with ID: ${id}`);
-	if (answer) {
-		try {
-			const response = await fetch(url, options);
-			console.log(response);
-			getAllUsers();
-		} catch (error) {
-			console.error(error);
-		}
-	}
-};
 
 
 function logResponse(codeblock, text) {
@@ -166,7 +116,4 @@ registerForm.addEventListener('submit', registerUser);
 
 const loginForm = document.querySelector('.loginForm');
 loginForm.addEventListener('submit', loginUser);
-
-const meRequest = document.querySelector('#meRequest');
-meRequest.addEventListener('click', checkUser);
 

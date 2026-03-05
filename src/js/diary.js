@@ -3,13 +3,13 @@ import '../css/mobile.css';
 import '../css/diary-card.css'
 
 
-import { getEntries, addEntry, } from './entries.js'
+import { getEntries, addEntry, deleteEntry } from './entries.js'
 
 const getEntriesBtn = document.querySelector('.get_entries');
 getEntriesBtn.addEventListener('click', getEntries);
 
-const addEntriesBtn = document.querySelector('.add_entries');
 
+const addEntriesBtn = document.querySelector('.add_entries');
 
 
 const addDialog = document.querySelector('.add_entry_dialog');
@@ -72,6 +72,30 @@ addEntryDialogBtn.addEventListener('click', async () => {
 
     // Päivitä näkymä
     getEntries();
+  }
+});
+
+const diaryDialog = document.querySelector(".diary_dialog");
+const deleteEntryBtn = document.getElementById("deleteEntryBtn");
+
+// Sulje dialogi
+closeEntryBtn.addEventListener("click", () => {
+  diaryDialog.close();
+});
+
+deleteEntryBtn.addEventListener("click", async () => {
+  const entryId = diaryDialog.dataset.entryId; // haetaan ID datasetistä
+  if (!entryId) return;
+
+  if (confirm("Haluatko varmasti poistaa tämän merkinnän?")) {
+    const result = await deleteEntry(entryId); // calls entries.js DELETE-funktio
+    if (!result.error) {
+      alert("Merkintä poistettu onnistuneesti!");
+      diaryDialog.close();
+      getEntries(); // päivitä lista näkymään
+    } else {
+      alert("Poisto epäonnistui: " + result.error);
+    }
   }
 });
 

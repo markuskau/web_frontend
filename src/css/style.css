@@ -283,6 +283,7 @@ footer {
 
   .card-widgets {
     width: 80%;
+    flex-direction: column;
   }
 
   .about-text h2 {

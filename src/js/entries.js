@@ -64,8 +64,9 @@ const getEntries = async (event) => {
     // Lisätään napille kuuntelija
     openCard.addEventListener("click", () => {
       dialog.showModal();
-      dialog.querySelector(".diary_id").innerHTML =
-        `<div>ID: <span>${entry.entry_id}</span></div>`;
+      dialog.dataset.entryId = entry.entry_id;
+      dialog.querySelector(".diary_id").textContent =
+        `ID: ${entry.entry_id}`;
     });
 
     card.appendChild(cardDiary);
@@ -108,4 +109,25 @@ const addEntry = async ({ entry_date, mood, weight, sleep_hours, notes }) => {
   }
 };
 
-export { getEntries, addEntry, };
+const deleteEntry = async (entryId) => {
+  const url = `http://localhost:3000/api/entries/${entryId}`;
+  const token = localStorage.getItem("token");
+  const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
+  const response = await fetch(url, {
+    method: "DELETE",
+    headers: headers,
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    console.error("Error deleting entry:", data);
+    return { error: data.error || data.message || "Unknown error" };
+  }
+
+  console.log("Entry deleted:", data.message);
+  return data;
+};
+
+export { getEntries, addEntry, deleteEntry };
