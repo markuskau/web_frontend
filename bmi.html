@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMI laskuri</title>
+    <title>BMI calculator</title>
     <link rel="stylesheet" href="./src/css/bmi.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
@@ -16,47 +16,46 @@
         <h1 class="headline">HealthDiary</h1>
 
         <nav id="nav-links">
-          <a href="home.html">Koti</a>
-          <a href="bmi.html">BMI-laskin</a>
-          <a href="diary.html">Päiväkirja</a>
+          <a href="home.html">Home</a>
+          <a href="bmi.html">BMI-calculator</a>
+          <a href="diary.html">Diary</a>
         </nav>
       </header>
 
     <div class="card">
       <img id="bmiPic" src="/public/img/bmi.png" alt="BMI-luokat" />
-      <h1>Painoindeksilaskuri / BMI laskuri</h1>
+      <h1>Body Mass Index Calculator / BMI Calculator</h1>
       <p class="description">
-        Painoindeksilaskurilla voit laskea pituuden ja painon perusteella
-        painoindeksin (BMI, Body Mass Index).
+        With the Body Mass Index calculator you can calculate your BMI (Body Mass Index) based on your height and weight.
       </p>
 
-      <label>Anna painosi:</label>
+      <label>Your weight:</label>
       <input type="number" id="weight" placeholder="kg" />
-      <label>Anna pituutesi:</label>
+      <label>Your height:</label>
       <input type="number" id="height" placeholder="cm" />
-      <button onclick="calculateBMI()">Laske indeksi</button>
-      <p class="result">Mittaustuloksesi: <span id="bmiValue">0</span></p>
+      <button onclick="calculateBMI()">Calculate index</button>
+      <p class="result">Measurement result: <span id="bmiValue">0</span></p>
 
       <table>
         <tr id="low">
-          <td>Alipaino</td>
+          <td>Underweight</td>
           <td>0 - 18.9</td>
       </tr>
 
         <tr id="normal">
-          <td>Normaali paino</td>
+          <td>Normal weight</td>
           <td>19 - 24.9</td>
       </tr>
 
       <tr id="high">
-        <td>Ylipaino</td>
-        <td>25 - 40.0 tai enemmän</td>
+        <td>Overweight</td>
+        <td>25 - 40.0 or more</td>
       </tr>
       </table>
 
       <p class="analysis">
-        <strong>Analyysi:</strong>
-        <span id="analysisText">Tähän saat tietoa painoindeksistäsi</span>
+        <strong>Analysis:</strong>
+        <span id="analysisText">Here you can find information about your body mass index</span>
       </p>
     </div>
 

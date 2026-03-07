@@ -1,60 +1,72 @@
+// Tuodaan css-tyylit
 import '../css/style.css'
 import '../css/mobile.css';
+// Tuodaan fetchData-funktio, jota käytetään API-kutsuihin
 import { fetchData } from './fetch.js';
 
-document.addEventListener("DOMContentLoaded", () => {
-  const userArea = document.getElementById("user-area");
-  const sleepWidget = document.querySelector(".widget-sleep");
+// Tässä on hyödynnetty tekoälyä osaan koodeista, mutta koodit kirjoitettu itse ja tarkistettu ymmärretäviksi, sekä katsottu että vastaa kurssin materiaaleja.
+
+// Suoritetaan koodi kun HTML on latautunut
+document.addEventListener('DOMContentLoaded', () => {
+  // Haetaan käyttäjäalue ja sleep-widget DOM:sta
+  const userArea = document.getElementById('user-area');
+  const sleepWidget = document.querySelector('.widget-sleep');
 
   // haetaan käyttäjä localStoragesta
-  const user = localStorage.getItem("name");
+  const user = localStorage.getItem('name');
 
   // Tarkistetaan onko käyttäjä kirjautunut
   if (user && userArea) {
+    // Näytetään käyttäjän nimi ja logout-linkki
     userArea.innerHTML = `
-      <span>Hei, ${user} 👋</span>
-      <a href="#" id="logout">Kirjaudu ulos</a>
+      <span>Hello, ${user} 👋</span>
+      <a href="#" id="logout">Logout</a>
     `;
 
-    // Logout
-    document.getElementById("logout").addEventListener("click", () => {
+    // Logout toiminto
+    document.getElementById('logout').addEventListener('click', () => {
       // Poistetaan käyttäjä localStoragesta
-      localStorage.removeItem("name");
-      localStorage.removeItem("token"); // jos käytät tokenia myös logoutissa
+      localStorage.removeItem('name');
+      // Poistetaan myös käyttäjän token localstoragesta
+      localStorage.removeItem('token');
 
-      // Tyhjennetään widget
+      // Tyhjennetään sleep-widget
       if (sleepWidget) {
-        sleepWidget.innerHTML = "";
+        sleepWidget.innerHTML = '';
       }
-
+      // ladataan sivu uudelleen
       location.reload();
     });
   }
 
-  // Lasketaan unen keskiarvo
+  // Funktio joka laskee nukutun unen keskiarvon
   const getSleepAverage = async () => {
-    const url = "http://localhost:3000/api/entries";
+    // API-osoite josta merkinnät haetaan
+    const url = 'http://localhost:3000/api/entries';
+    // Header-objekti API-kutsua varten
     let headers = {};
-    const token = localStorage.getItem("token");
-
+    // Haetaan token localstoragesta
+    const token = localStorage.getItem('token');
+    // Jos token löytyy lisätään se Authorization headeriin
     if (token) {
       headers = { Authorization: `Bearer ${token}` };
     }
-
+    // Haetaan päiväkirjamerkinnät palvelimelta
     const entries = await fetchData(url, { headers });
+    // Lopetetaan toiminto jos dataa ei saatu
     if (!entries || entries.error) return;
-
+    // Lasketaan kaikkien merkintöjen unen tuntien summa
     const totalSleep = entries.reduce(
       (sum, entry) => sum + Number(entry.sleep_hours),
       0
     );
-
+    // Lasketaan keskiarvo ja pyöristetään yhteen desimaaliin
     const average = (totalSleep / entries.length).toFixed(1);
 
-    // Näytetään widgetissä
+    // Näytetään keskiarvo sleep-widgetissä
     if (sleepWidget) {
       sleepWidget.innerHTML = `
-        <h4>Nukutun unen keskiarvo</h4>
+        <h4>Sleep average:</h4>
         <div style="font-size: 28px; font-weight: bold;">
           ${average} h
         </div>

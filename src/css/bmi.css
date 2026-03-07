@@ -1,4 +1,13 @@
-/* Osassa koodia on käytetty tekoälyä hyödyksi */
+/* Osa tyylien ideoinnista on tuotettu tekoälyn avulla.
+  Varsinaiset CSS-tyylit on kuitenkin kirjoitettu itse,
+  ja koodi on käyty läpi sekä ymmärretty miten se toimii.
+  Tyylejä on myös muokattu projektin tarpeisiin sopiviksi.
+*/
+
+
+/* =====================================================
+   YLEISET TYYLIT
+===================================================== */
 
 body {
   margin: 0;
@@ -12,6 +21,10 @@ body {
   margin: auto;
   background-color: rgb(241, 241, 241);
 }
+
+/* =====================================================
+   NAVIGAATIO
+===================================================== */
 
 .navbar {
   background-color: rgb(75, 230, 14);
@@ -53,6 +66,10 @@ body {
   width: 100%;
 }
 
+/* =====================================================
+   OTSIKOT JA TEKSTIT
+===================================================== */
+
 .headline {
   color: rgb(255, 243, 243);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
@@ -63,6 +80,10 @@ body {
   letter-spacing: 1.5px;
   font-family: "Poppins", "Montserrat", sans-serif;
 }
+
+/* =====================================================
+   KORTIT JA BMI-LASKURI
+===================================================== */
 
 .card {
   max-width: 450px;
@@ -137,6 +158,10 @@ td {
   margin-top: 12px;
   font-size: 16px;
 }
+
+/* =====================================================
+   RESPONSIIVISUUS
+===================================================== */
 
 @media (max-width: 900px) {
   .page {

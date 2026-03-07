@@ -1,8 +1,11 @@
-import '../css/bmi.css';
+// Tuodaan BMI laskurin tyylitiedosto
+import '../css/bmi.css'
+
+
 // Tässä koodissa hyödynnetty tekoälyä, mutta koodi kirjoitettu itse ja ymmärrettävästi
 
 
-// Lasketaan painoindeksi
+// Funktio jossa lasketaan painoindeksi
 window.calculateBMI = function () {
   const weight = Number(document.getElementById('weight').value);
   console.log('Weight:', weight);
@@ -17,25 +20,31 @@ window.calculateBMI = function () {
   document.getElementById('bmiValue').textContent = roundedBMI;
   console.log('BMI value:', roundedBMI);
 
+
+  // Haetaan aikaisempi BMI-historia localstoragesta
   let history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
+  // Lisätään uusi BMI-arvo historiaan
   history.push(bmi);
+  // Tallennetaan päivitetty historia takaisin localstorageen
   localStorage.setItem('bmiHistory', JSON.stringify(history));
 
+  // Poistetaan aktiivinen luokka kaikista BMI-luokista enne uuden lisäämistä.
   clearActive();
 
-  let analysis = "";
+  // Muuttuja analyysitekstille
+  let analysis = '';
 
   // Tarkastetaan painoindeksin arvo ja valitaan arvoa vastaava analyysi
   if (bmi < 19) {
     document.getElementById('low').classList.add('active');
-    analysis = "Painoindeksisi on matala. Tämä voi viitata alipainoon.";
+    analysis = "Your body mass index is low. This may indicate that you are underweight.";
   } else if (bmi < 25) {
     document.getElementById('normal').classList.add('active');
     analysis =
-      "Normaaliksi on valittu painoindeksin alue, jossa ihmisen terveys on parhaimmillaan. Normaali painoindeksin alue on välillä 18,5-25. Jos painoindeksi on pienenmpi kuin 18,5 tai suurempi kuin 25, sairauksien vaara suurenee. Painoindeksiä voidaan käyttää 18 vuoden iästä lähtien";
+      "The normal range of body mass index has been chosen as the range in which a person's health is at its best. The normal range of body mass index is between 18.5 and 25. If the body mass index is lower than 18.5 or higher than 25, the risk of diseases increases. The body mass index can be used from the age of 18.";
   } else {
     document.getElementById('high').classList.add('active');
-    analysis = "Painoindeksisi on korkea. Ylipaino lisää sairauksien riskiä.";
+    analysis = "Your body mass index is high. Being overweight increases the risk of diseases.";
   }
 
   // Näytetään analyysi käyttöliittymässä

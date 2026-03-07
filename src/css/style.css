@@ -1,4 +1,12 @@
-/* Osassa koodia on hyödynnetty tekoälyä */
+/* Osa tyylien ideoinnista on tuotettu tekoälyn avulla.
+  Varsinaiset CSS-tyylit on kuitenkin kirjoitettu itse,
+  ja koodi on käyty läpi sekä ymmärretty miten se toimii.
+  Tyylejä on myös muokattu projektin tarpeisiin sopiviksi.
+*/
+
+/* ======================
+   PERUS SIVUTYYLIT
+====================== */
 
 body {
   margin: 0;
@@ -13,6 +21,10 @@ body {
   background-color: rgb(241, 241, 241);
 }
 
+/* ======================
+   NAVIGAATIO
+====================== */
+
 .navbar {
   background-color: rgb(75, 230, 14);
   padding: 20px;
@@ -26,6 +38,8 @@ body {
   margin-right: 40px;
 }
 
+/* navigaatiolinkkien tyyli */
+
 #nav-links a {
   color: rgb(107, 107, 107);
   margin-right: 24px;
@@ -36,6 +50,8 @@ body {
   position: relative;
   transition: color 0.3s ease;
 }
+
+/* hover-alleviivaus animaatio */
 
 #nav-links a::after {
   content: "";
@@ -51,6 +67,10 @@ body {
 #nav-links a:hover::after {
   width: 100%;
 }
+
+/* ======================
+   OTSIKKO JA TEKSTIT
+====================== */
 
 .headline {
   color: rgb(255, 243, 243);
@@ -76,6 +96,8 @@ body {
   animation: fadeUp 0.8s ease forwards;
 }
 
+/* tekstin sisääntulo animaatio */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -90,6 +112,10 @@ body {
 dialog {
   margin: auto;
 }
+
+/* ======================
+   DIARY CARD + WIDGETIT
+====================== */
 
 .card {
   width: 450px;
@@ -112,6 +138,9 @@ dialog {
   display: flex;
   gap: 20px;
 }
+
+/* BMI widget */
+
 .widget-bmi {
   flex: auto;
   background: rgba(255, 255, 255, 0.9);
@@ -131,6 +160,9 @@ dialog {
   font-size: 24px;
   margin-top: 6px;
 }
+
+/* Sleep widget */
+
 .widget-sleep {
   flex: auto;
   background: rgba(255, 255, 255, 0.9);
@@ -158,6 +190,10 @@ dialog {
   margin-right: 10px;
 }
 
+/* ======================
+   FOOTER
+====================== */
+
 footer {
   width: 100%;
   height: 30px;
@@ -184,6 +220,10 @@ footer {
   right: 26px;
 }
 
+/* ======================
+   HERO KUVA
+====================== */
+
 .hero {
   background-image: url("/public/img/kuntosaliv0.2.jpg");
   background-size: cover;
@@ -197,6 +237,10 @@ footer {
   display: flex;
   align-items: center;
 }
+
+/* ======================
+   RESPONSIIVISUUS
+====================== */
 
 @media (max-width: 900px) {
   .page {
@@ -248,9 +292,8 @@ footer {
   }
 
   #gym {
-    float: none;
-    display: block;
-    margin: 0 auto 15px;
+    float: left;
+    margin-right: 0 auto 15px;
     width: 120px;
   }
 
@@ -285,6 +328,7 @@ footer {
     width: 80%;
     flex-direction: column;
   }
+
 
   .about-text h2 {
     font-size: 1.8rem;

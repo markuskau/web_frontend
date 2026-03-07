@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minun sivu</title>
+    <title>Home Page</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
@@ -16,13 +16,13 @@
         <h1 class="headline">HealthDiary</h1>
 
         <nav id="nav-links">
-          <a href="home.html">Koti</a>
-          <a href="bmi.html">BMI-laskin</a>
-          <a href="diary.html">Päiväkirja</a>
+          <a href="home.html">Home</a>
+          <a href="bmi.html">BMI-calculator</a>
+          <a href="diary.html">Diary</a>
 
 
           <span id="user-area">
-            <a href="login.html" class="btn-outline">Kirjaudu</a>
+            <a href="index.html" class="btn-outline">Login</a>
           </span>
         </nav>
       </header>
@@ -33,21 +33,21 @@
         <div class="about-text">
           <h2>
             HealthDiary
-            <span id="lightblue">tallenna ja seuraa omaa terveyttäsi</span>
-            viikon jokaisena päivänä
+            <span id="lightblue">record and track your own health</span>
+            every day of the week
           </h2>
         </div>
       </div>
 
       <div class="card-widgets">
           <div class="widget-bmi">
-            <h4>BMI-tulokset</h4>
+            <h4>BMI-Chart</h4>
             <span>📈</span>
             <canvas id="bmiChartWidget" width="100" height="30"></canvas>
           </div>
 
           <div class="widget-sleep">
-            <h4>Nukutun unen keskiarvo</h4>
+            <h4>Average sleep</h4>
             <span>💤</span>
           </div>
         </div>
@@ -55,21 +55,21 @@
       <div class="card">
         <div id="laatikko1"></div>
 
-        <h3>Tietoa sovelluksesta</h3>
+        <h3>App info</h3>
           <img id="gym" src="/public/img/kuntosali.jpg" alt="Kuntosali" />
           <p>
-          Tämä hyvinvointisovellus auttaa sinua seuraamaan kahta tärkeää terveyden osa-aluetta: kehon painoindeksiä (BMI) ja unen laatua.
-          Sovelluksen tavoitteena on tarjota selkeä ja helppokäyttöinen tapa ymmärtää omaa hyvinvointiasi sekä tukea terveellisiä elämäntapoja.
+          This wellness app helps you track two important aspects of your health: body mass index (BMI) and sleep quality.
+          The app aims to provide a clear and easy-to-use way to understand your own well-being and support a healthy lifestyle.
         </p>
         <p>
-          Sovelluksessa voit laskea ja seurata BMI-arvoasi syöttämällä pituutesi ja painosi.
-          BMI auttaa arvioimaan, onko painosi terveellisellä tasolla suhteessa pituuteesi.
-          Sovellus tallentaa aiemmat mittaukset, jolloin voit tarkastella muutoksia ajan myötä ja seurata kehitystäsi.
+          The app allows you to calculate and track your BMI by entering your height and weight.
+          BMI helps you assess whether your weight is at a healthy level for your height.
+          The app saves your previous measurements, allowing you to view changes over time and track your progress.
         </p>
         <p>
-          Yhdistämällä BMI- ja unen seurannan sovellus tarjoaa kokonaisvaltaisemman kuvan hyvinvoinnistasi.
-          Selkeät yhteenvedot ja seuranta auttavat sinua tekemään tietoisempia päätöksiä terveydestäsi ja arjestasi.
-          Sovellus on suunniteltu tukemaan pieniä, mutta merkityksellisiä muutoksia kohti parempaa hyvinvointia.
+          By combining BMI and sleep tracking, the app provides a more holistic view of your well-being.
+          Clear summaries and tracking help you make more informed decisions about your health and everyday life.
+          The app is designed to support small but meaningful changes towards better well-being.
         </p>
 
       </div>

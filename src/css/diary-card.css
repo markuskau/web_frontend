@@ -1,3 +1,13 @@
+/* Osa tyylien ideoinnista on tuotettu tekoälyn avulla.
+  Varsinaiset CSS-tyylit on kuitenkin kirjoitettu itse,
+  ja koodi on käyty läpi sekä ymmärretty miten se toimii.
+  Tyylejä on myös muokattu projektin tarpeisiin sopiviksi.
+*/
+
+/* =====================================================
+   YLEISET TYYLIT JA RAKENNE
+===================================================== */
+
 body {
   display: flex;
   flex-direction: column;
@@ -13,6 +23,7 @@ h2 {
   position: relative;
 }
 
+/* otsikon alleviiva */
 h2::after {
   content: "";
   display: block;
@@ -23,6 +34,9 @@ h2::after {
   border-radius: 2px;
 }
 
+/* =====================================================
+   PÄÄNAPPIT JA TOIMINNALLISET NAPIT
+===================================================== */
 .get_entries {
   background: linear-gradient(135deg, #3ab66d, #9c9da0);
   color: white;
@@ -58,6 +72,10 @@ h2::after {
   transform: translateY(0);
 }
 
+/* =====================================================
+   PÄIVÄKIRJAKORTIT JA WIDGETIT
+===================================================== */
+
 .diary-card-area {
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +100,9 @@ footer {
   text-align: center;
 }
 
-/* ===== Dialogi ===== */
+/* =====================================================
+   DIALOGIT
+===================================================== */
 
 .diary_dialog {
   border: none;
@@ -109,7 +129,7 @@ footer {
     135deg,
     #3ab66d,
     #9c9da0
-  ); /* sama tyyli kuin päänapissa */
+  );
   color: white;
   border: none;
   padding: 10px 22px;
@@ -142,6 +162,10 @@ footer {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* =====================================================
+   LISÄÄ ENTRY DIALOGI
+===================================================== */
 
 
 .add_entry_dialog {
@@ -227,7 +251,9 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Responsiivisuus*/
+/* =====================================================
+   RESPONSIIVISUUS
+===================================================== */
 
 @media (max-width: 900px) {
 

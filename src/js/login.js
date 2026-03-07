@@ -1,13 +1,15 @@
+// Tuodaan kirjautumissivulla käytettävät css-tyylit
 import '../css/login.css';
 import '../css/snackbar.css';
+// Tuodaan fetchData-funktio API-kutsuja varten
 import { fetchData } from './fetch.js';
+
 
 console.log('Moi luodaan nyt tokeneita ja kirjaudutaan sisään');
 
-// Esimerkin takia haut ovat nyt suoraan tässä tiedostossa, jotta harjoitus ei sekoita
-// teidän omaa projektin rakennetta
-
+// Funktio uuden käyttäjän rekisteroimiseen
 const registerUser = async (event) => {
+  // Estetään lomakkeen oletustoiminto
 	event.preventDefault();
 
 	// Haetaan oikea formi
@@ -95,7 +97,7 @@ const loginUser = async (event) => {
 		console.log(response.message, 'success');
 		localStorage.setItem('token', response.token);
 		localStorage.setItem('name', response.user.username);
-		logResponse('loginResponse', `Kirjautuminen onnistui. Tervetuloa ${response.user.username}!`);
+		logResponse('loginResponse', `Login succesfully. Welcome ${response.user.username}!`);
 		setTimeout(function () {
 			window.location.href = 'home.html';
 		}, 3000);
@@ -106,14 +108,15 @@ const loginUser = async (event) => {
 };
 
 
-
+// Funktio joka näyttää viestin HTML-elementissä
 function logResponse(codeblock, text) {
 	document.getElementById(codeblock).innerText = text;
 }
 
+// Haetaan rekisteröintilomake ja lisätään submit tapahtuma
 const registerForm = document.querySelector('.registerForm');
 registerForm.addEventListener('submit', registerUser);
-
+// Haetaan kirjautumislomake ja lisätään submit tapahtuma
 const loginForm = document.querySelector('.loginForm');
 loginForm.addEventListener('submit', loginUser);
 

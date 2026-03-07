@@ -18,14 +18,20 @@
         id="username"
         type="text"
         name="username"
+        minlength="3"
+        maxlength="20"
         placeholder="daisy"
+        required
       />
       <label for="password">Password</label>
       <input
         id="password"
         type="password"
         name="password"
+        minlength="8"
+        maxlength="100"
         placeholder="duck"
+        required
       />
       <label for="email">Email</label>
       <input
@@ -33,6 +39,7 @@
         type="email"
         name="email"
         placeholder="daisy@example.com"
+        required
       />
       <input
         name="submit"
@@ -48,13 +55,16 @@
     <div>
       <form class="loginForm">
         <label for="username">Username</label>
-        <input type="text" name="username" placeholder="name" value="markus3" />
+        <input type="text" name="username" placeholder="name" minlength="3" maxlength="20" value="markus3" required />
         <label for="password">Password</label>
         <input
           type="password"
           name="password"
+          minlength="8"
+          maxlength="100"
           placeholder="name123"
           value="salakala"
+          required
         />
         <input
           name="submit"

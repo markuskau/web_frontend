@@ -15,19 +15,19 @@
         <h1 class="headline">HealthDiary</h1>
 
         <nav id="nav-links">
-          <a href="home.html">Koti</a>
-          <a href="bmi.html">BMI-laskin</a>
-          <a href="diary.html">Päiväkirja</a>
+          <a href="home.html">Home</a>
+          <a href="bmi.html">BMI-calculator</a>
+          <a href="diary.html">Diary</a>
         </nav>
       </header>
     </div>
 
     <main>
-      <h2>Päiväkirjahaut</h2>
+      <h2>Diary searches</h2>
 
-      <button class="get_entries">Hae päiväkirjamerkinnät</button>
+      <button class="get_entries">Search for diary entries</button>
       <br />
-      <button class="add_entries">Lisää uusi päiväkirjamerkintä</button>
+      <button class="add_entries">Add a new diary entry</button>
 
       <section class="diary-card-area"></section>
     </main>
@@ -35,20 +35,20 @@
     <footer>Copyright Markus</footer>
 
     <dialog class="diary_dialog">
-      <h2>Päiväkirjamerkintä</h2>
-      <p>Tässä näet Entry ID:n</p>
+      <h2>Diary entry</h2>
+      <p>Here you can see the entry id of the diary entry</p>
       <div class="diary_id">ID</div>
-      <button id="closeEntryBtn" autofocus>Sulje</button>
-      <button id="deleteEntryBtn" autofocus>Poista</button>
+      <button id="closeEntryBtn" autofocus>Close</button>
+      <button id="deleteEntryBtn" autofocus>Delete</button>
     </dialog>
 
     <dialog class="add_entry_dialog">
-      <h2>Lisää uusi päiväkirjamerkintä</h2>
-      <label>Päivämäärä: <input type="date" id="entryDate" /></label>
-      <label>Mieliala: <input type="text" id="mood" /></label>
-      <label>Paino (kg): <input type="number" id="weight" /></label>
-      <label>Unet (tunnit): <input type="number" id="sleepHours" /></label>
-      <label>Muistiinpanot: <textarea id="notes"></textarea></label>
+      <h2>Add a new diary entry</h2>
+      <label>Date: <input type="date" id="entryDate" /></label>
+      <label>Mood: <input type="text" id="mood" /></label>
+      <label>Weight (kg): <input type="number" id="weight" /></label>
+      <label>Sleep (hrs): <input type="number" id="sleepHours" /></label>
+      <label>Notes: <textarea id="notes"></textarea></label>
       <button id="addEntryDialogBtn">Add</button>
       <button id="closeAddDialogBtn">Close</button>
     </dialog>
