@@ -97,7 +97,7 @@ const loginUser = async (event) => {
 		console.log(response.message, 'success');
 		localStorage.setItem('token', response.token);
 		localStorage.setItem('name', response.user.username);
-		logResponse('loginResponse', `Login succesfully. Welcome ${response.user.username}!`);
+		logResponse('loginResponse', `Login successful. Welcome ${response.user.username}!`);
 		setTimeout(function () {
 			window.location.href = 'home.html';
 		}, 3000);
