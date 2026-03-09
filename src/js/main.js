@@ -82,23 +82,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+// Odotetaan että HTML-dokumentti on täysin ladattu ennen koodin suorittamista
 document.addEventListener('DOMContentLoaded', () => {
+  // Haetaan BMI-historia localstoragesta ja muutetaan se taulukoksi
   const history = JSON.parse(localStorage.getItem('bmiHistory')) || [];
-
+  // Haetaan canvas-elementti ja sen piirto-konteksti kaavion piirtämistä varten
   const ctx = document.getElementById('bmiChartWidget').getContext('2d');
+  // Luodaan uusi Chart.js kaavio
   new Chart(ctx, {
-    type: 'line',
+    type: 'line', // Määritetään kaavion tyypiksi viivakaavio
     data: {
-      labels: history.map((_, i) => `Mittaus ${i + 1}`),
+      // Luodaan x-akselin otsikot
+      labels: history.map((_, i) => `Value ${i + 1}`),
       datasets: [{
-        label: 'BMI-arvo',
-        data: history,
+        label: 'BMI-value',
+        data: history, // BMI-arvot localstoragesta
         borderColor: 'rgba(75, 192, 192, 1)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         tension: 0.3
       }]
     },
+    // Kaavion asetukset
     options: { responsive: true }
   });
 });
