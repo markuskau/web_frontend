@@ -13,7 +13,6 @@ Test Own App Login Headless
     Type Text      form.loginForm >> [name="username"]    ${Username}    delay=0.1 s
     Type Secret    form.loginForm >> [name="password"]    $Password    delay=0.1 s
     Click With Options    form.loginForm >> input.loginform[type="submit"]    delay=1 s
-    # Odotetaan, että loginResponse sisältää token
     Wait For Elements State    div#loginResponse    visible    timeout=10 s
     Sleep   1 s
     ${message}=    Get Text    div#loginResponse
