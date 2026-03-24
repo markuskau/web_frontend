@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.9.13 on win32)" generated="2026-03-24T11:41:37.826294" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser Demo" source="C:\Metropolia\front-end\hyte-projekti\tests\browser_demo.robot">
+<test id="s1-t1" name="Test Own App Login Headless" line="8">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-03-24T11:41:38.318939" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\b970a2b5-081f-4e39-891e-1f9dbdf2298f"}</msg>
+<msg time="2026-03-24T11:41:38.380280" level="INFO">Starting Browser process C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53757</msg>
+<msg time="2026-03-24T11:41:40.930655" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\b970a2b5-081f-4e39-891e-1f9dbdf2298f"}</msg>
+<arg>firefox</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-03-24T11:41:38.313406" elapsed="2.617249"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-03-24T11:41:44.467501" level="INFO">Successfully initialized new page object and opened url: https://users.metropolia.fi/~markkaur/web_hyte/Final%20version/dist/</msg>
+<msg time="2026-03-24T11:41:44.467501" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://users.metropolia.fi/~markkaur/web_hyte/Final%20version/dist/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-03-24T11:41:40.934684" elapsed="3.532817"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2026-03-24T11:41:44.523863" level="INFO">Title: 'Login page'</msg>
+<arg>==</arg>
+<arg>Login page</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-03-24T11:41:44.471030" elapsed="0.052833"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2026-03-24T11:41:44.527904" level="INFO">Types the text 'markus3' in the given field.</msg>
+<arg>form.loginForm &gt;&gt; [name="username"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-03-24T11:41:44.525883" elapsed="1.244560"/>
+</kw>
+<kw name="Type Secret" owner="Browser">
+<arg>form.loginForm &gt;&gt; [name="password"]</arg>
+<arg>$Password</arg>
+<arg>delay=0.1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="PASS" start="2026-03-24T11:41:45.774966" elapsed="1.099575"/>
+</kw>
+<kw name="Click With Options" owner="Browser">
+<msg time="2026-03-24T11:41:46.874541" level="INFO">Clicks the element 'form.loginForm &gt;&gt; input.loginform[type="submit"]'.</msg>
+<arg>form.loginForm &gt;&gt; input.loginform[type="submit"]</arg>
+<arg>delay=1 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-24T11:41:46.874541" elapsed="1.170633"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-03-24T11:41:48.079246" level="INFO">Waited for Element with selector div#loginResponse at state visible</msg>
+<arg>div#loginResponse</arg>
+<arg>visible</arg>
+<arg>timeout=10 s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-03-24T11:41:48.046779" elapsed="0.033118"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-24T11:41:49.086084" level="INFO">Slept 1 second.</msg>
+<arg>1 s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-24T11:41:48.079897" elapsed="1.006187"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-03-24T11:41:49.203484" level="INFO">Text: 'Login successful. Welcome markus3!'</msg>
+<msg time="2026-03-24T11:41:49.203484" level="INFO">${message} = Login successful. Welcome markus3!</msg>
+<var>${message}</var>
+<arg>div#loginResponse</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-03-24T11:41:49.092127" elapsed="0.111357"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>Login successful</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-03-24T11:41:49.205498" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>markus3</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-03-24T11:41:49.205498" elapsed="0.000000"/>
+</kw>
+<doc>Test successful login without browser popups</doc>
+<status status="PASS" start="2026-03-24T11:41:38.313406" elapsed="10.895489"/>
+</test>
+<status status="PASS" start="2026-03-24T11:41:37.831842" elapsed="11.381175"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Browser Demo" id="s1" pass="1" fail="0" skip="0">Browser Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
