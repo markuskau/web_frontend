@@ -30,6 +30,8 @@ Test Own App Login Headless
 
 ### Testin tulos löytyy tiedostosta [output.xml](../../outputs/output.xml).
 
+### Testitiedosto oman sivun testiin (.robot) löytyy tiedostosta [health-diary.robot](../../tests/health-diary.robot)
+
 
 
 

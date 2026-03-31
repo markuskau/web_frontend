@@ -1,37 +1,28 @@
-{"level":30,"time":"2026-03-24T09:41:00.875Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:54744"}
-{"level":30,"time":"2026-03-24T09:41:01.300Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-24T09:41:02.373Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
-{"level":30,"time":"2026-03-24T09:41:02.373Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-24T09:41:02.373Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-24T09:41:02.392Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-24T09:41:02.392Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@e84a0dcde1629c0a05a3acc2d1f942d8\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=2874f184-e531-43c5-afed-8b5c7cd215fd\"}"}
-{"level":30,"time":"2026-03-24T09:41:02.578Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=0a2a3d33-11f5-465f-9401-c0a9041f44b3 to 10000"}
-{"level":30,"time":"2026-03-24T09:41:02.578Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=0a2a3d33-11f5-465f-9401-c0a9041f44b3"}
-{"level":30,"time":"2026-03-24T09:41:05.528Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-24T09:41:05.529Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
-{"level":30,"time":"2026-03-24T09:41:15.546Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Error of node method  newPage"}
-================= Original suppressed error =================
-page.goto: Timeout 10000ms exceeded.
-Call log:
-[2m  - navigating to "https://users.metropolia.fi/~markkaur/web_hyte/Final%20version/dist/", waiting until "load"[22m
-
-    at newPage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:12892:18)
-    at async PlaywrightServer.newPage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:13510:28) {
-  name: 'TimeoutError'
-}
-=============================================================
-{"level":30,"time":"2026-03-24T09:41:15.561Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method takeScreenshot"}
-================= Original suppressed error =================
-Error: Tried to take screenshot, but no page was open.
-    at exists (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:10979:11)
-    at takeScreenshot (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:11035:3)
-    at PlaywrightServer.takeScreenshot (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:13510:34)
-    at Object.onReceiveHalfClose (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
-    at ServerHttp2Stream.<anonymous> (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
-    at ServerHttp2Stream.emit (node:events:520:35)
-    at endReadableNT (node:internal/streams/readable:1701:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
-=============================================================
-{"level":30,"time":"2026-03-24T09:41:15.562Z","pid":20604,"hostname":"DESKTOP-TVSSB2F","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2026-03-31T06:57:09.140Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:53425"}
+{"level":30,"time":"2026-03-31T06:57:09.231Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-03-31T06:57:10.114Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-03-31T06:57:10.114Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-03-31T06:57:10.115Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-03-31T06:57:10.124Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-03-31T06:57:10.125Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@f320a23e3e6cd82d909456a05d1d529b\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=c0639d55-27fc-431b-9e00-fa2fe0253880\"}"}
+{"level":30,"time":"2026-03-31T06:57:10.244Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=40a9c541-850e-4621-bc2e-99f15a9f800e to 10000"}
+{"level":30,"time":"2026-03-31T06:57:10.244Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=40a9c541-850e-4621-bc2e-99f15a9f800e"}
+{"level":30,"time":"2026-03-31T06:57:13.647Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-03-31T06:57:13.647Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-03-31T06:57:14.087Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newPage"}
+{"level":30,"time":"2026-03-31T06:57:14.098Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-31T06:57:14.098Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> [name=\"username\"] in page."}
+{"level":30,"time":"2026-03-31T06:57:15.133Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-03-31T06:57:15.148Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-31T06:57:15.149Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> [name=\"password\"] in page."}
+{"level":30,"time":"2026-03-31T06:57:16.113Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-03-31T06:57:16.121Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method click"}
+{"level":30,"time":"2026-03-31T06:57:16.121Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> input.loginform[type=\"submit\"] in page."}
+{"level":30,"time":"2026-03-31T06:57:17.309Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method click"}
+{"level":30,"time":"2026-03-31T06:57:17.317Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-03-31T06:57:17.317Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with div#loginResponse in page."}
+{"level":30,"time":"2026-03-31T06:57:17.330Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-03-31T06:57:18.348Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method getText"}
+{"level":30,"time":"2026-03-31T06:57:18.349Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with div#loginResponse in page."}
+{"level":30,"time":"2026-03-31T06:57:18.423Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"Retrieved text for element div#loginResponse containing "}
+{"level":30,"time":"2026-03-31T06:57:18.423Z","pid":21448,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method getText"}

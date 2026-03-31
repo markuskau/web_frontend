@@ -1,0 +1,75 @@
+{"level":30,"time":"2026-03-25T12:12:50.279Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:59115"}
+{"level":30,"time":"2026-03-25T12:12:50.338Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-03-25T12:12:50.858Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2026-03-25T12:12:50.858Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-03-25T12:12:50.859Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-03-25T12:12:50.873Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-03-25T12:12:50.874Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@3dbadadf922a1b916b5def84242a4f37\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=0ec749fc-70a4-4315-abe8-f888c28f11cf\"}"}
+{"level":30,"time":"2026-03-25T12:12:50.943Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=8da53a9c-e8e1-45e0-872d-0046fbf7fc61 to 10000"}
+{"level":30,"time":"2026-03-25T12:12:50.944Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=8da53a9c-e8e1-45e0-872d-0046fbf7fc61"}
+{"level":30,"time":"2026-03-25T12:12:51.331Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-03-25T12:12:51.331Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-03-25T12:12:51.591Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newPage"}
+{"level":30,"time":"2026-03-25T12:12:51.655Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:51.656Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2026-03-25T12:12:51.935Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:51.949Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:51.950Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2026-03-25T12:12:52.036Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:52.047Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:52.047Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2026-03-25T12:12:52.373Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:52.382Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method selectOption"}
+{"level":30,"time":"2026-03-25T12:12:52.383Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with [name=\"my-select\"] in page."}
+{"level":30,"time":"2026-03-25T12:12:52.454Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Option entries: 4"}
+{"level":30,"time":"2026-03-25T12:12:52.454Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Selected entries: 1"}
+{"level":30,"time":"2026-03-25T12:12:52.454Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method selectOption"}
+{"level":30,"time":"2026-03-25T12:12:52.466Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-03-25T12:12:52.466Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with [name=\"my-datalist\"] in page."}
+{"level":30,"time":"2026-03-25T12:12:52.581Z","pid":2980,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+node:internal/modules/cjs/loader:1420
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module './../../../package.json'
+Require stack:
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\utils\userAgent.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\registry\browserFetcher.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\registry\index.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\index.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\remote\playwrightConnection.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\remote\playwrightServer.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\androidServerImpl.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\inProcessFactory.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\inprocess.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\index.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright\index.js
+- C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
+    at Module._load (node:internal/modules/cjs/loader:1226:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1503:12)
+    at require (node:internal/modules/helpers:152:16)
+    at getPlaywrightVersion (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\utils\userAgent.js:90:54)
+    at HarTracer.stop (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\har\harTracer.js:464:57) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\utils\\userAgent.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\registry\\browserFetcher.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\registry\\index.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\index.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\remote\\playwrightConnection.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\remote\\playwrightServer.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\androidServerImpl.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\inProcessFactory.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\inprocess.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\index.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright\\index.js',
+    'C:\\Metropolia\\front-end\\hyte-projekti\\.venv\\lib\\site-packages\\Browser\\wrapper\\index.js'
+  ]
+}
+
+Node.js v25.2.1

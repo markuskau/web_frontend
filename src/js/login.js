@@ -113,6 +113,8 @@ function logResponse(codeblock, text) {
 	document.getElementById(codeblock).innerText = text;
 }
 
+
+
 // Haetaan rekisteröintilomake ja lisätään submit tapahtuma
 const registerForm = document.querySelector('.registerForm');
 registerForm.addEventListener('submit', registerUser);
