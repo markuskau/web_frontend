@@ -7,7 +7,7 @@ ${Username}   markus3
 
 *** Test Cases ***
 Test Own App Login Headless
-    Set Suite Variable    $Password    salakala
+    Set Suite Variable    $Password    salasana-tähän
     New Browser    firefox    headless=No
     New Page       ${URL}
     Type Text      form.loginForm >> [name="username"]    ${Username}    delay=0.1 s
