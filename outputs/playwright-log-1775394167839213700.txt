@@ -1,0 +1,28 @@
+{"level":30,"time":"2026-04-05T13:02:49.032Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:58587"}
+{"level":30,"time":"2026-04-05T13:02:49.070Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-04-05T13:02:50.103Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-04-05T13:02:50.103Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-04-05T13:02:50.103Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-04-05T13:02:50.113Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-04-05T13:02:50.113Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@ed5e01bbac7fe3f078a32634b0653376\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=dc660707-cf4e-414b-bbab-8b2bbaae9aa9\"}"}
+{"level":30,"time":"2026-04-05T13:02:50.382Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=8de6772f-6aa9-42cc-91ac-3044f28ed58e to 10000"}
+{"level":30,"time":"2026-04-05T13:02:50.382Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=8de6772f-6aa9-42cc-91ac-3044f28ed58e"}
+{"level":30,"time":"2026-04-05T13:02:52.845Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-04-05T13:02:52.845Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-04-05T13:02:55.348Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newPage"}
+{"level":30,"time":"2026-04-05T13:02:55.359Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-04-05T13:02:55.360Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> [name=\"username\"] in page."}
+{"level":30,"time":"2026-04-05T13:02:56.106Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-04-05T13:02:56.117Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-04-05T13:02:56.117Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> [name=\"password\"] in page."}
+{"level":30,"time":"2026-04-05T13:02:57.090Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}
+{"level":30,"time":"2026-04-05T13:02:57.100Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method click"}
+{"level":30,"time":"2026-04-05T13:02:57.101Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> input.loginform[type=\"submit\"] in page."}
+{"level":30,"time":"2026-04-05T13:02:58.251Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method click"}
+{"level":30,"time":"2026-04-05T13:02:58.275Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-04-05T13:02:58.275Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with div#loginResponse in page."}
+{"level":30,"time":"2026-04-05T13:02:58.288Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-04-05T13:02:59.313Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method getText"}
+{"level":30,"time":"2026-04-05T13:02:59.314Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with div#loginResponse in page."}
+{"level":30,"time":"2026-04-05T13:02:59.390Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"Retrieved text for element div#loginResponse containing "}
+{"level":30,"time":"2026-04-05T13:02:59.390Z","pid":19760,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method getText"}

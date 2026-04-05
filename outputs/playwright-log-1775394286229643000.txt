@@ -1,0 +1,12 @@
+{"level":30,"time":"2026-04-05T13:04:47.383Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:62148"}
+{"level":30,"time":"2026-04-05T13:04:47.472Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-04-05T13:04:48.342Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-04-05T13:04:48.342Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-04-05T13:04:48.342Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-04-05T13:04:48.350Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-04-05T13:04:48.350Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@1d8967139afd66e8fbd2b59d864771c1\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=86613a13-f478-43f6-884b-0b82fa9d7daf\"}"}
+{"level":30,"time":"2026-04-05T13:04:48.462Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=8e1613e7-cf92-4331-9216-714bf39803b5 to 10000"}
+{"level":30,"time":"2026-04-05T13:04:48.462Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=8e1613e7-cf92-4331-9216-714bf39803b5"}
+{"level":30,"time":"2026-04-05T13:04:50.987Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-04-05T13:04:50.988Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-04-05T13:04:53.470Z","pid":22020,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newPage"}

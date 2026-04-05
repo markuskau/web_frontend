@@ -1,0 +1,5 @@
+{"level":30,"time":"2026-04-05T12:53:50.118Z","pid":14072,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:50602"}
+{"level":30,"time":"2026-04-05T12:53:50.171Z","pid":14072,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-04-05T12:53:51.451Z","pid":14072,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-04-05T12:53:51.451Z","pid":14072,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-04-05T12:53:51.451Z","pid":14072,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}

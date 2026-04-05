@@ -1,0 +1,15 @@
+{"level":30,"time":"2026-04-05T12:59:02.905Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:54767"}
+{"level":30,"time":"2026-04-05T12:59:03.418Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-04-05T12:59:04.362Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-04-05T12:59:04.362Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-04-05T12:59:04.363Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-04-05T12:59:04.370Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-04-05T12:59:04.371Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@711ed15ea10ef5e0b3d3e8d404aac38c\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=a025d18e-3953-4fd5-86f4-0a1d71b6a7d9\"}"}
+{"level":30,"time":"2026-04-05T12:59:04.536Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=43057a0a-feda-433e-9cc0-8d3b7d6ba32d to 10000"}
+{"level":30,"time":"2026-04-05T12:59:04.537Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=43057a0a-feda-433e-9cc0-8d3b7d6ba32d"}
+{"level":30,"time":"2026-04-05T12:59:07.020Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-04-05T12:59:07.021Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-04-05T12:59:09.607Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newPage"}
+{"level":30,"time":"2026-04-05T12:59:09.621Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method typeText"}
+{"level":30,"time":"2026-04-05T12:59:09.621Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"Strict mode is enabled, find Locator with form.loginForm >> [name=\"username\"] in page."}
+{"level":30,"time":"2026-04-05T12:59:10.449Z","pid":21080,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method typeText"}

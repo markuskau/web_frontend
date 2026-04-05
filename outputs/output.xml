@@ -1,114 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.9.13 on win32)" generated="2026-03-31T10:04:51.560245" rpa="false" schemaversion="5">
-<suite id="s1" name="Health-Diary" source="C:\Metropolia\front-end\hyte-projekti\tests\health-diary.robot">
-<test id="s1-t1" name="Test Own App Login Headless" line="9">
-<kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-03-31T10:04:51.952803" level="INFO">${Password} = salakala</msg>
-<arg>$Password</arg>
-<arg>salakala</arg>
-<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-03-31T10:04:51.940562" elapsed="0.012241"/>
-</kw>
+<robot generator="Robot 7.4.2 (Python 3.9.13 on win32)" generated="2026-04-05T16:05:10.912919" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Metropolia\front-end\hyte-projekti\tests\login_test.robot">
+<test id="s1-t1" name="Test Own App Login Headless" line="6">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-03-31T10:04:51.958522" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\fb99fa1b-d703-4382-bda4-a012552c2182"}</msg>
-<msg time="2026-03-31T10:04:51.995838" level="INFO">Starting Browser process C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:61955</msg>
-<msg time="2026-03-31T10:04:54.040255" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\fb99fa1b-d703-4382-bda4-a012552c2182"}</msg>
+<msg time="2026-04-05T16:05:11.298385" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\1bd2eec7-82a5-48fa-9172-7cb8df939a88"}</msg>
+<msg time="2026-04-05T16:05:11.350448" level="INFO">Starting Browser process C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:59261</msg>
+<msg time="2026-04-05T16:05:13.304504" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Metropolia\\front-end\\hyte-projekti\\outputs\\browser\\traces\\temp\\1bd2eec7-82a5-48fa-9172-7cb8df939a88"}</msg>
 <arg>firefox</arg>
-<arg>headless=No</arg>
+<arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-03-31T10:04:51.953963" elapsed="2.086292"/>
+<status status="PASS" start="2026-04-05T16:05:11.296749" elapsed="2.007755"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-03-31T10:04:56.992233" level="INFO">Successfully initialized new page object and opened url: https://users.metropolia.fi/~markkaur/web_hyte/Final%20version/dist/</msg>
-<msg time="2026-03-31T10:04:56.992233" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>${URL}</arg>
+<msg time="2026-04-05T16:05:18.731499" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173/</msg>
+<msg time="2026-04-05T16:05:18.731499" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-03-31T10:04:54.046999" elapsed="2.945234"/>
+<status status="PASS" start="2026-04-05T16:05:13.305699" elapsed="5.426413"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2026-03-31T10:04:56.994247" level="INFO">Types the text 'markus3' in the given field.</msg>
+<msg time="2026-04-05T16:05:18.734144" level="INFO">Types the text 'marku' in the given field.</msg>
 <arg>form.loginForm &gt;&gt; [name="username"]</arg>
-<arg>${Username}</arg>
-<arg>delay=0.1 s</arg>
+<arg>${USERNAME}</arg>
+<arg>delay=0.2 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-31T10:04:56.992233" elapsed="1.089656"/>
+<status status="PASS" start="2026-04-05T16:05:18.732112" elapsed="1.288134"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>form.loginForm &gt;&gt; [name="password"]</arg>
-<arg>$Password</arg>
-<arg>delay=0.1 s</arg>
+<arg>$PASSWORD</arg>
+<arg>delay=0.2 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2026-03-31T10:04:58.081889" elapsed="1.003234"/>
+<status status="PASS" start="2026-04-05T16:05:20.020246" elapsed="1.806483"/>
 </kw>
 <kw name="Click With Options" owner="Browser">
-<msg time="2026-03-31T10:04:59.092024" level="INFO">Clicks the element 'form.loginForm &gt;&gt; input.loginform[type="submit"]'.</msg>
+<msg time="2026-04-05T16:05:21.828749" level="INFO">Clicks the element 'form.loginForm &gt;&gt; input.loginform[type="submit"]'.</msg>
 <arg>form.loginForm &gt;&gt; input.loginform[type="submit"]</arg>
 <arg>delay=1 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-31T10:04:59.085123" elapsed="1.160375"/>
+<status status="PASS" start="2026-04-05T16:05:21.828749" elapsed="1.128858"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-03-31T10:05:00.272895" level="INFO">Waited for Element with selector div#loginResponse at state attached</msg>
+<msg time="2026-04-05T16:05:22.988483" level="INFO">Waited for Element with selector div#loginResponse at state visible</msg>
 <arg>div#loginResponse</arg>
-<arg>attached</arg>
-<arg>timeout=10 s</arg>
+<arg>visible</arg>
+<arg>timeout=15 s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-03-31T10:05:00.252874" elapsed="0.020021"/>
+<status status="PASS" start="2026-04-05T16:05:22.970843" elapsed="0.017640"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-03-31T10:05:01.285085" level="INFO">Slept 1 second.</msg>
+<msg time="2026-04-05T16:05:23.995868" level="INFO">Slept 1 second.</msg>
 <arg>1 s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-03-31T10:05:00.276402" elapsed="1.008683"/>
+<status status="PASS" start="2026-04-05T16:05:22.988483" elapsed="1.007385"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2026-03-31T10:05:01.379542" level="INFO">Text: 'Login successful. Welcome markus3!'</msg>
-<msg time="2026-03-31T10:05:01.379542" level="INFO">${message} = Login successful. Welcome markus3!</msg>
+<msg time="2026-04-05T16:05:24.090185" level="INFO">Text: ''</msg>
+<msg time="2026-04-05T16:05:24.090185" level="INFO">${message} = </msg>
 <var>${message}</var>
 <arg>div#loginResponse</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-31T10:05:01.286947" elapsed="0.092595"/>
+<status status="PASS" start="2026-04-05T16:05:23.995868" elapsed="0.094317"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-05T16:05:24.092828" level="INFO">Login response: </msg>
+<arg>Login response: ${message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-05T16:05:24.090185" elapsed="0.003152"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
+<msg time="2026-04-05T16:05:24.095878" level="FAIL">'' does not contain 'Login successful'</msg>
 <arg>${message}</arg>
 <arg>Login successful</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-03-31T10:05:01.382493" elapsed="0.000000"/>
+<status status="FAIL" start="2026-04-05T16:05:24.093337" elapsed="0.002541">'' does not contain 'Login successful'</status>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${message}</arg>
-<arg>${Username}</arg>
+<arg>${USERNAME}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-03-31T10:05:01.384250" elapsed="0.000638"/>
+<status status="NOT RUN" start="2026-04-05T16:05:24.096724" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-03-31T10:04:51.935985" elapsed="9.450674"/>
+<doc>Testaa kirjautuminen omalle sovellukselle käyttäen .env</doc>
+<status status="FAIL" start="2026-04-05T16:05:11.284541" elapsed="12.812183">'' does not contain 'Login successful'</status>
 </test>
-<status status="PASS" start="2026-03-31T10:04:51.563286" elapsed="9.834325"/>
+<status status="FAIL" start="2026-04-05T16:05:10.915942" elapsed="13.191606"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Health-Diary" id="s1" pass="1" fail="0" skip="0">Health-Diary</stat>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
 </suite>
 </statistics>
 <errors>
