@@ -1,5 +1,37 @@
-{"level":30,"time":"2026-04-05T12:52:40.453Z","pid":16808,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:59876"}
-{"level":30,"time":"2026-04-05T12:52:40.580Z","pid":16808,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-04-05T12:52:42.034Z","pid":16808,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
-{"level":30,"time":"2026-04-05T12:52:42.034Z","pid":16808,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-04-05T12:52:42.034Z","pid":16808,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-04-11T12:28:57.345Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Listening on 127.0.0.1:63490"}
+{"level":30,"time":"2026-04-11T12:28:57.613Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-04-11T12:28:59.082Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Adding browser to stack: firefox, version: 142.0.1"}
+{"level":30,"time":"2026-04-11T12:28:59.082Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-04-11T12:28:59.082Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-04-11T12:28:59.102Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-04-11T12:28:59.103Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"currentBrowser: {\"name\":\"firefox\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@283aa708d48778d92aca7b099633615c\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=9fc1d381-3a09-414c-93d6-5605a7004ec7\"}"}
+{"level":30,"time":"2026-04-11T12:28:59.244Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Setting default timeout for context context=56e6a8a5-6c05-42c2-bc91-52ccf7243e2c to 10000"}
+{"level":30,"time":"2026-04-11T12:28:59.244Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active context: context=56e6a8a5-6c05-42c2-bc91-52ccf7243e2c"}
+{"level":30,"time":"2026-04-11T12:29:01.644Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Video path: undefined"}
+{"level":30,"time":"2026-04-11T12:29:01.644Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Changed active page"}
+{"level":30,"time":"2026-04-11T12:29:04.114Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Error of node method  newPage"}
+================= Original suppressed error =================
+page.goto: NS_ERROR_CONNECTION_REFUSED
+Call log:
+[2m  - navigating to "http://localhost:5173/", waiting until "load"[22m
+
+    at newPage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:12892:18)
+    at async PlaywrightServer.newPage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:13510:28) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2026-04-11T12:29:04.124Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:10979:11)
+    at takeScreenshot (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:11035:3)
+    at PlaywrightServer.takeScreenshot (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\index.js:13510:34)
+    at Object.onReceiveHalfClose (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Metropolia\front-end\hyte-projekti\.venv\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+=============================================================
+{"level":30,"time":"2026-04-11T12:29:04.125Z","pid":17848,"hostname":"DESKTOP-TVSSB2F","msg":"Error of node method  takeScreenshot"}
